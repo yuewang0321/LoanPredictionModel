@@ -1,0 +1,19 @@
+{
+  "name": "lpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuewang0321/LoanPredictionModel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuewang0321/LoanPredictionModel/issues"
+  },
+  "homepage": "https://github.com/yuewang0321/LoanPredictionModel#readme"
+}
