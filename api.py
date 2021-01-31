@@ -21,22 +21,22 @@ def parseData(data):
     lst = []
     for key, value in data.items():
         lst.append(float(value))
-    print(lst)
+#     print(lst)
     return [lst]
 
 @app.route('/predict/', methods=['GET','POST'])
 def makecalc():
     print("inside mackecalc")
     response_object={'status':'success'}
-    print(request.method)
+#     print(request.method)
     if (request.method=='POST'):
         print("inside the if")
         data = request.get_json(force=True)
         new = parseData(data)
         prediction = np.array2string(model.predict(new))
-        print(prediction)
+#         print(prediction)
         if(str(prediction)=="[[1.]]"):
-            print("inner if")
+#             print("inner if")
             response_object=json.dumps({'status':'1'})
         elif(str(prediction)=="[[0.]]"):
             response_object={'status':'0'}
@@ -49,6 +49,6 @@ def makecalc():
 if __name__ == '__main__':
     modelfile = './tempmodel.h5'
     #model = p.load(open(modelfile, 'rb'))
-    print(modelfile)
+#     print(modelfile)
     model = tf.keras.models.load_model(modelfile)
     app.run() 
